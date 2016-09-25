@@ -1,0 +1,33 @@
+<head>
+<title>Rainbow grid!</title>
+<style>
+html, body {
+    width:  100%;
+    height: 100%;
+    margin: 0px;
+}
+#grid{
+	position:absolute;
+    background: #FFFFFF
+}
+#counter {
+    z-index: 100;
+    position: relative;
+    text-align: center;
+	top: 30%;
+}
+#slider{
+    z-index: 101;
+    position: relative;
+    text-align: right;
+	top: 50%;
+}
+</style>
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD/AMwAAP8eAACV/wD/jAAAAP/yAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERETMzMAAABBEREzMzAAAEQRERMzMwAAREERETMzMABERBEREzMzAEREQRERMzMwJEREERETMzMiRERBEREzMyIkREQRERMzIiJEREERETMiIiRERBERE1IiIkREQRERVSIiJEREERFVUiIiRERBEVVVIiIkREQRVVVSIiJEREEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+<script src='https://cdn.jsdelivr.net/jquery/3.0.0-rc1/jquery.min.js'></script>
+<script src='client.js'></script>
+</head>
+<body onresize="updateValue(localStorage['size'])">
+<canvas id="grid"></canvas>
+</div>
+</body>
