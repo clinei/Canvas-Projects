@@ -50,20 +50,16 @@ function drawCanvas(){
     while ((size + offset) * w > window.innerWidth) {
         w--
     }
-    //$("#counter")[0].innerHTML = `(${w}, ${h})`;
+
     fillColor = "#FFF";
     for (var x = 0; x < w + 1; x++) {
         for (var y = 0; y < h + 1; y++) {
             ab.push([x * (size + offset) + 5, y * (size + offset) + 5, size, size])
         }
     }
-    var colNum = 0;
     drawInt = setInterval(function() {
         createCirc(randArr(ab))
     }, 1000)
-    window.fitText(document.getElementById("fit"));
-    document.getElementById("slideRange").value = localStorage["size"];
-    document.getElementById("range").innerHTML = localStorage["size"];
 };
 
 document.addEventListener("DOMContentLoaded", function(event) {
