@@ -1,0 +1,39 @@
+<head>
+<title>Rainbow grid!</title>
+<style>
+html, body {
+    width:  100%;
+    height: 100%;
+    margin: 0px;
+}
+#grid{
+	position:absolute;
+    background: #999
+}
+#counter {
+    z-index: 100;
+    position: relative;
+    text-align: center;
+	top: 30%;
+    font-family: 'Knewave';
+}
+#slider{
+    z-index: 101;
+    position: relative;
+    text-align: right;
+	top: 50%;
+}
+</style>
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD/AMwAAP8eAACV/wD/jAAAAP/yAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERETMzMAAABBEREzMzAAAEQRERMzMwAAREERETMzMABERBEREzMzAEREQRERMzMwJEREERETMzMiRERBEREzMyIkREQRERMzIiJEREERETMiIiRERBERE1IiIkREQRERVSIiJEREERFVUiIiRERBEVVVIiIkREQRVVVSIiJEREEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css?family=Knewave&effect=shadow-multiple" rel="stylesheet">
+<script src="fit.js"></script>
+<script src='https://cdn.jsdelivr.net/jquery/3.0.0-rc1/jquery.min.js'></script>
+<script src='client.js'></script>
+</head>
+<body onresize="updateValue(localStorage['size'])">
+<canvas id="grid"></canvas>
+<div id='counter'><h1 class='font-effect-shadow-multiple' id="fit">Rainbow!</h1></div>
+<div id="slider">
+<input id="slideRange" type="range" min="5" max="250" value="25" onchange="updateValue(this.value)" />
+</div>
+</body>
